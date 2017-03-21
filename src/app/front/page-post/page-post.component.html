@@ -1,0 +1,31 @@
+<div class="row">
+  <!--post-->
+   <div class="main-content col-md-8">
+        <article *ngFor="let postItem of post" class="post post-has-thumbnail post-page">
+            <header class="post-header">
+                <div class="post-cat">
+                    <a [routerLink]="['/category', postItem.category]">{{postItem.category}}</a>
+                </div>
+                <h3 class="post-title">
+                    {{postItem.title}}
+                </h3>
+                <span class="post-date">
+                    <time>{{postItem.date}}</time>
+                </span>
+                <a href="javascript:void(0);" class="post-by">{{postItem.author}}</a>
+            </header>
+
+            <div class="post-attached-thumb">
+                <a href="javascript:void(0);">
+                    <img src="assets/img/{{postItem.image}}">
+                </a>
+            </div>
+
+            <div class="entry-content" [innerHTML]="postItem.postContent">
+            </div>
+        </article>
+    </div>
+   
+  <!--aside-->
+    <app-aside></app-aside>
+</div>

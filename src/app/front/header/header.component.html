@@ -1,0 +1,15 @@
+<header class="header">
+  <div class="container wrap">
+      <div class="top-logo"><h1><a routerLink="/">CHEER<span>UP</span></a></h1></div>
+      <!--main menu-->
+      <div class="nav-wrapper">
+          <nav class="nav-sticky-wrapper" id="sticky-nav">
+              <ul class="main-menu">
+                  <li><a routerLink="/">HOME</a></li>
+                  <li *ngFor="let category of categories"><a [routerLink]="['/category', category.name]">{{category.name}}</a></li>
+                  <li><a routerLink="/contact">CONTACT</a></li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+</header>

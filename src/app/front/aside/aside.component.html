@@ -1,0 +1,15 @@
+<aside class="sidebar col-md-4">
+  <section class="sidebar-item cats">
+      <h4 class="sidebar-title">CATEGORIES</h4>
+      <ul>
+          <li *ngFor="let category of categories;"><a [routerLink]="['/category', category.name]">{{category.name}}</a></li>
+      </ul>
+  </section>
+  <section class="sidebar-item featured">
+      <h4 class="sidebar-title">Editor's choice</h4>
+      <div class="featured-block">
+          <img src="../assets/img/simple.jpg">
+          <a href="javascript:void(0);">DILLON – CRITICS CALL HER A NEW BJORK!</a>
+      </div>
+  </section>
+</aside>

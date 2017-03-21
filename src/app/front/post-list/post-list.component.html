@@ -1,0 +1,33 @@
+<div class="main-content col-md-8">
+  <div class="post-list">
+     <article *ngFor="let post of posts" class="post">
+          <div class="post-thumb">
+              <a [routerLink]="['/post', post.postUrl]">
+                  <img src="assets/img/{{post.image}}">
+              </a>
+          </div>
+          <div class="post-content">
+              <header class="post-header">
+                  <div class="post-cat">
+                      <a [routerLink]="['/category', post.category]">{{post.category}}</a>
+                  </div>
+                  <h3 class="post-title">
+                      <a [routerLink]="['/post', post.postUrl]">{{post.title}}</a>
+                  </h3>
+                  <span class="post-date">
+                      <time>{{post.date}}</time>
+                  </span>
+                  <a href="javascript:void(0);" class="post-by">by {{post.author}}</a>
+              </header>
+              <div class="entry-content">
+                  <p>{{post.content | cutText : 130}}</p>
+                  <a [routerLink]="['/post', post.postUrl]" class="read-more">...</a>
+              </div>
+              <div class="post-line"></div>
+          </div>
+      </article>
+     <div class="empty-container" *ngIf="!posts?.length">
+        <h2>No Post</h2>
+     </div>
+  </div>
+</div>
