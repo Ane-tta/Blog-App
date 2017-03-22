@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PromoAreaComponent implements OnInit {
 
+    cat1 = 'food';
+    cat2 = 'health';
+    cat3 = 'lifestyle';
+    
   constructor() { }
 
   ngOnInit() {

@@ -1,13 +1,13 @@
 <div class="promo-area wrap-box">
   <div class="promo-items">
-      <a href="javascript:void(0);" class="promo-item" style="background-image:url(assets/img/fresh.jpg);">
-          <span class="promo-title">food</span>
+      <a [routerLink]="['/category', cat1]" class="promo-item" style="background-image:url(assets/img/fresh.jpg);">
+          <span class="promo-title">{{cat1}}</span>
       </a>
-      <a href="javascript:void(0);" class="promo-item" style="background-image:url(assets/img/simple.jpg);">
-          <span class="promo-title">health</span>
+      <a [routerLink]="['/category', cat2]" class="promo-item" style="background-image:url(assets/img/simple.jpg);">
+          <span class="promo-title">{{cat2}}</span>
       </a>
-      <a href="javascript:void(0);" class="promo-item" style="background-image:url(assets/img/book.jpg);">
-          <span class="promo-title">lifestyle</span>
+      <a [routerLink]="['/category', cat3]" class="promo-item" style="background-image:url(assets/img/book.jpg);">
+          <span class="promo-title">{{cat3}}</span>
       </a>
   </div>
 </div>
