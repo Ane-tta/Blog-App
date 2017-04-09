@@ -25,6 +25,24 @@ h4
     margin 0
     color black2
     
+input
+textarea
+    border none
+    background-color violet
+    border-radius 5px
+    box-sizing border-box
+    padding-left 30px
+    padding-right 30px
+textarea
+    padding-top 20px
+    padding-bottom 20px
+label
+    font-weight 600
+.required
+    color #ff34ff
+    font-weight 700
+    padding-left 5px
+    
 ul
     padding 0
     margin 0
@@ -39,6 +57,18 @@ a
 article
     p
         line-height 1.66em
+        
+.btn
+    padding 8px 20px
+    transition time
+    
+.btn-regular
+    background-color violet2
+    color #fff
+    &:hover
+        background-color black
+        color #fff
+        
     
 .wrap-box
     clear both
@@ -209,6 +239,7 @@ article
         padding-top 12px
         a
             position absolute
+            left 0
             bottom 20px
             background-color violet
             padding 5px 10px
@@ -261,6 +292,40 @@ article
     margin-bottom 30px
     img
        width 100%
+       
+//***** Contact Form *****
+.simple-form
+    margin-bottom 100px
+    h2
+        text-transform uppercase
+        position relative
+        margin-bottom 40px
+        display inline-block
+        &:after
+            @extends .sidebar-title:before
+            width 100%
+            bottom -15px
+    input
+        height 45px
+        line-height 45px
+    input
+    textarea
+        width 100%
+        background #eae9ea
+    textarea
+        resize none
+        height 300px
+.form-item
+    margin-bottom 13px
+    
+.form-error
+    background-color #47658e
+    color #fff
+    border-radius 5px
+    padding 13px 30px
+    margin-top 8px
+        
+        
 
 //***** Footer Section *****
 .footer
@@ -277,3 +342,29 @@ article
     margin 20px 0
     font-size 12px
 
+    
+    
+@media (max-width: 991px)
+    .sidebar
+        display none
+        
+
+@media (max-width: 600px)
+    .promo-items
+        a
+            height 130px
+    .post-thumb
+    .post-content
+        width 100%
+    .post-content
+        padding-top 20px
+        padding-left 0
+        
+
+@media (max-width: 414px)
+    .promo-items
+        a
+            height 100px
+    .promo-title
+        margin-top 27%
+        font-size 21px
